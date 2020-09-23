@@ -4,6 +4,7 @@
     <title>Contato</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/assets/css/style.css">
+    
     <ul id="menu">
       <li> 
           <a href="index.html">Home</a>
@@ -24,26 +25,28 @@
               <br>
               <br>
             <label for="nome">Nome</label>
-            <input type="text" id="nome">
-              <br>
+            <input type="text" id="nome" onkeyup="validaNome()">
+            <div id="txtNome"></div>
               <br>
             <label for="email">Email</label>
-            <input type="email" id="email">
+            <input type="email" id="email"  onkeyup="validaEmail()">
+            <div id="txtEmail"></div>
               <br>
               <br>
             <label for="assunto">Assunto</label>
-            <textarea name="assunto" id="assunto" cols="40" rows="5"> </textarea>
+            <textarea name="assunto" id="assunto" cols="40" rows="5" onkeyup="validaAssunto()"> </textarea>
+            <div id="txtAssunto"></div>
               <br>
               <br>
-            <button>Enviar</button>
+            <button onclick="enviar()">Enviar</button>
           </form>
     
     </div>    
       <div class="ml-50"> 
         <p>Av. Paulista bairro: Bela Vista</p>
         <p>número: 1500</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1784278452983!2d-46.6574662851581!3d-23.562034384682566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c925263541%3A0x4b30df73fca5a36b!2sAv.%20Paulista%2C%201500%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1600726921890!5m2!1spt-BR!2sbr" 
-        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1784278452983!2d-46.6574662851581!3d-23.562034384682566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c925263541%3A0x4b30df73fca5a36b!2sAv.%20Paulista%2C%201500%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1600726921890!5m2!1spt-BR!2sbr" 
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" onmousemove="zoom()" onmouseout="normal()">
          </iframe>
         </div>
         </div>
@@ -57,5 +60,6 @@
     <p class="center">Mussum copyWritiiissss &copy;</p>
   
   </footer>
+  <script type="text/javascript" src="assets/js/scripts.js"></script>
   </body>
 </html>
